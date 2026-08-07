@@ -126,22 +126,18 @@ Phase 3: Quota & File Screening Configuration
 2. Under Quota Management, create a 2 GB Hard Quota on path C:\Shares\HR_Data.
 3. Under File Screen Management, apply Block Executable Files template to prevent .exe, .bat, .vbs, and .cmd files from being stored.
 
-Automated Share & FSRM Configuration Script (PowerShell)
+## Automated Share & FSRM Configuration Script (PowerShell)
 
-# =========================================================
+### Folder Share, NTFS Permissions & FSRM Setup
 
-# Folder Share, NTFS Permissions & FSRM Setup
-
-# =========================================================
-
-# Step 1: Create Directory and SMB Share
+### Step 1: Create Directory and SMB Share
 
 ```
 New-Item -Path "C:\Shares\HR_Data" -ItemType Directory -Force
 New-SmbShare -Name "HR_Data" -Path "C:\Shares\HR_Data" -FullAccess "Administrators" -ChangeAccess "OBK\GG_HR_Dept"
 ```
 
-# Step 2: Configure NTFS Permissions
+### Step 2: Configure NTFS Permissions
 
 ```
 $acl = Get-Acl "C:\Shares\HR_Data"
@@ -153,7 +149,7 @@ $acl.AddAccessRule($hrRule)
 Set-Acl -Path "C:\Shares\HR_Data" -AclObject $acl
 ```
 
-# Step 3: Configure FSRM Quota & File Screening
+### Step 3: Configure FSRM Quota & File Screening
 
 ```
 Install-WindowsFeature -Name FS-Resource-Manager -IncludeManagementTools
@@ -189,7 +185,7 @@ netdom query fsmo
 net use
 ```
 
-# Verify FSRM Quotas and File Screen Status
+### Verify FSRM Quotas and File Screen Status
 
 ```
 Get-FsrmQuota -Path "C:\Shares\HR_Data"
