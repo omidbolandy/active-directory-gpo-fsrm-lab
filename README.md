@@ -1,8 +1,8 @@
 # 🏛️ Active Directory DS, GPO Security & FSRM Storage Management
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Category: Windows Server](https://img.shields.io/badge/Category-Windows%20Server%202022-0078D4?logo=windows)](https://obkworks.com)
-[![Topic: MCSA Lab](https://img.shields.io/badge/Lab-MCSA%20Practical-0A66C2)](https://obkworks.com)
+[![Category: Windows Server](https://img.shields.io/badge/Category-Windows%20Server%202022-0078D4?logo=windows)](https://obkworks.tr)
+[![Topic: MCSA Lab](https://img.shields.io/badge/Lab-MCSA%20Practical-0A66C2)](https://obkworks.tr)
 
 > Practical enterprise infrastructure lab deploying Active Directory Domain Services (AD DS), structured AGDLP Organizational Units, Group Policy (GPO) security hardening, SMB/NTFS permissions, and File Server Resource Manager (FSRM) quota & file screening.
 
@@ -210,6 +210,6 @@ Get-FsrmFileScreen -Path "C:\Shares\HR_Data"
 
 2. Aligning AGDLP security group standards with strict NTFS access limits and automated FSRM executable file screening significantly lowers unauthorized lateral movement and ransomware propagation risks.
 
-🔗 Live Portfolio Demo: Coming soon
+🔗 Live Portfolio: https://obkworks.tr
 
 📄 License: MIT License — © 2026 obkWorks
